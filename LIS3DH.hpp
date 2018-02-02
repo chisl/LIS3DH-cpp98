@@ -309,7 +309,10 @@ public:
 			static const uint8_t PULL_UP_NOT_CONNECTED = 0b1; // pull-up disconnected to SDO/SA0 pin
 		};
 		/* Bits reserved_0: */
-		/* Note: Leave bits 0 through 6 at the default value in order to ensure correct operation of the device.  */
+		/*
+		 * Note: Leave bits 0 through 6 at the default value in order to ensure correct
+		 * operation of the device.
+		 */
 		struct reserved_0
 		{
 			/* MODE rw */
@@ -1346,11 +1349,11 @@ public:
 	 * Content of this register is loaded at boot.
 	 * Write operation at this address is possible only after system boot.
 	 * Table 55: Interrupt mode:
-	 * AOI           6D        Interrupt mode
-	 * 0              0        OR combination of interrupt events
-	 * 0              1        6-direction movement recognition
-	 * 1              0        AND combination of interrupt events
-	 * 1              1        6-direction position recognition
+	 * AOI    6D        Interrupt mode
+	 * 0       0        OR combination of interrupt events
+	 * 0       1        6-direction movement recognition
+	 * 1       0        AND combination of interrupt events
+	 * 1       1        6-direction position recognition
 	 * Difference between AOI-6D = ‘01’ and AOI-6D = ‘11’.
 	 * AOI-6D = ‘01’ is movement recognition. An interrupt is generated when the orientation moves from an
 	 * unknown zone to known zone. The interrupt signal remains for a duration ODR.
